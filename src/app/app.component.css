@@ -1,0 +1,28 @@
+ngx-parallax-scroll ::ng-deep .responsive-container {
+  height: 300px;
+}
+
+@media (min-width: 768px) {
+  ngx-parallax-scroll ::ng-deep .responsive-container {
+    height: 600px;
+  }
+}
+
+ngx-parallax-scroll ::ng-deep .multiple-container {
+  height: 900px;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.pad {
+  padding: 30px 60px;
+}
