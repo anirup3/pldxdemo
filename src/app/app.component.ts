@@ -35,5 +35,27 @@ export class AppComponent implements OnInit{
         }
       });
     });
+
+    window.addEventListener("scroll", this.reveal);
   }
+
+  reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    //alert("hi ani");
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+
+  }
+
+
+
 }
